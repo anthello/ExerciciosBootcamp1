@@ -27,7 +27,37 @@ public class Main {
 		mentoria2.setDescricao("Conceitos e Usos das Principais Bibliotecas Python");
 		mentoria2.setData (LocalDate.now());
 		
+		Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Linguagens Orientadas a Objetos");
+        bootcamp.setDescricao("Descrição Bootcamp POO Java e Python");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria1);
 		
+        Dev devAntonia = new Dev();
+        devAntonia.setNome("Antonia");
+        devAntonia.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos Inscritos Antonia:" + devAntonia.getConteudosInscritos());
+        devAntonia.progredir();
+        devAntonia.progredir();
+        System.out.println("-");
+        System.out.println("Conteúdos Inscritos Antonia:" + devAntonia.getConteudosInscritos());
+        System.out.println("Conteúdos Concluídos Antonia:" + devAntonia.getConteudosConcluidos());
+        System.out.println("XP:" + devAntonia.calcularTotalXp());
+        
+        System.out.println("-------");
+        
+        Dev devValter = new Dev();
+        devValter.setNome("Valter");
+        devValter.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos Inscritos Valter:" + devValter.getConteudosInscritos());
+        devValter.progredir();
+        devValter.progredir();
+        devValter.progredir();
+        System.out.println("-");
+        System.out.println("Conteúdos Inscritos Valter:" + devValter.getConteudosInscritos());
+        System.out.println("Conteúdos Concluidos Valter:" + devValter.getConteudosConcluidos());
+        System.out.println("XP:" + devValter.calcularTotalXp());
 	}
 
 }

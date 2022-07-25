@@ -69,5 +69,10 @@ public class Dev {
 				&& Objects.equals(conteudosInscritos, other.conteudosInscritos) 
 				&& Objects.equals(nome, other.nome);
 	}
+
+	public void setNome(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
